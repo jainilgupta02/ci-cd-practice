@@ -1,46 +1,94 @@
-# 🚀 CI/CD Practice – DevOps Internship (MS Elevate)
+# 🚀 CI/CD Practice with GitHub Actions
 
-This repository is part of my **GTU 8th Semester Internship** under  
-**Microsoft Elevate Program**, powered by **FICE Education**.
-
-I am learning and practicing **CI/CD pipelines using GitHub Actions & YAML**  
-with real Dev → Test → Prod workflow simulation.
+This repository is created as part of my **DevOps & Cloud Computing course (PW Skills)**  
+to practice **CI/CD pipelines using GitHub Actions and YAML**.
 
 ---
 
-## 🧠 What I’m Learning
-- CI/CD fundamentals
-- GitHub Actions
-- YAML workflows
-- Dev, Test, Prod environments
-- Python automation scripts
-- DevOps best practices
-- Real pipeline execution & logs
+## 📌 What this project demonstrates
+
+- Understanding CI/CD pipeline flow
+- Writing YAML workflows
+- Dev → Test → Prod stages
+- Job dependencies in GitHub Actions
+- Python automation in pipelines
+- Real-time pipeline logs
+- Hands-on DevOps practice
 
 ---
 
-## 📂 Project Structure
+## 🏗️ Project Structure
 ```text
 ci-cd-practice/
 │
-├── dev.py # Development stage simulation
-├── test.py # Testing stage simulation
-├── prod.py # Production deployment simulation
+├── dev.py # Development stage script
+├── test.py # Testing stage script
+├── prod.py # Production stage script
 │
 └── .github/
 └── workflows/
-└── main.yml # CI/CD pipeline definition
+└── main.yml # CI/CD pipeline
 ```
 
 ---
 
-## ⚙️ CI/CD Pipeline Flow
+## 🔄 CI/CD Pipeline Flow
+DEV → TEST → PROD
 
-```text
-Developer Push
-      ↓
-DEV job  → python dev.py
-      ↓
-TEST job → python test.py
-      ↓
-PROD job → python prod.py
+### 🔹 Dev Stage
+- Simulates environment setup
+- Dependency installation
+- Developer checks
+
+### 🔹 Test Stage
+- Simulates unit testing
+- Runs multiple test cases
+- Validates code before production
+
+### 🔹 Prod Stage
+- Simulates deployment
+- Logs deployment time
+- Marks application LIVE
+
+---
+
+## ⚙️ Technologies Used
+
+- **GitHub Actions**
+- **YAML**
+- **Python**
+- **Linux (Ubuntu runner)**
+- **Git & GitHub**
+- **CI/CD concepts**
+
+---
+
+## 📊 Where to see output?
+
+Go to:
+GitHub → Actions → Workflow run → Click job → View logs
+
+You will see live output like:
+- Development completed
+- Tests passed
+- Production deployed
+
+---
+
+## 🎓 Learning Outcome
+
+- Learned CI/CD from scratch
+- Understood pipeline stages
+- Hands-on with GitHub Actions
+- Built confidence in DevOps workflows
+
+---
+
+## 👨‍💻 Author
+
+**Jay Gupta**  
+DevOps & Cloud Computing Learner  
+PW Skills | Microsoft Elevate Intern  
+
+---
+⭐ If you find this useful, give it a star!
