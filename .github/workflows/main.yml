@@ -1,27 +1,56 @@
-name: Dev-Test-Prod Pipeline
+name: CI/CD Pipeline (Dev → Test → Prod)
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
   dev:
-    runs-on: ubuntu-latest
+    name: Development Stage
+    runs-on: ubuntu-22.04
+
     steps:
-      - uses: actions/checkout@v4
-      - run: python dev.py
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run dev script
+        run: python dev.py
 
   test:
-    runs-on: ubuntu-latest
+    name: Testing Stage
+    runs-on: ubuntu-22.04
     needs: dev
+
     steps:
-      - uses: actions/checkout@v4
-      - run: python test.py
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run test script
+        run: python test.py
 
   prod:
-    runs-on: ubuntu-latest
+    name: Production Stage
+    runs-on: ubuntu-22.04
     needs: test
+
     steps:
-      - uses: actions/checkout@v4
-      - run: python prod.py
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run prod script
+        run: python prod.py
